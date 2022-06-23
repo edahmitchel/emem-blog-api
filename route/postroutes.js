@@ -13,7 +13,7 @@ const {
 router.get("/:id", getSinglePost)
 router.get("/",allPosts )
 router.post("/",newPost)
-router.delete("/:id",deletePost)
+router.delete("del/:id",deletePost)
 router.get("like/:id", likePost)
 // put is to update
 router.put("/:id",updatePost)
