@@ -1,11 +1,10 @@
 const express = require("express");
 const app = express();
 const PORT = 8080;
+require('dotenv').config()
 const {mongoose} = require("./model/postschema");
-const dbName = "ememBLogAPI";
 const postRoutes = require("./route/postroutes")
-const password = "testing123";
-const mongoDBURI = `mongodb+srv://mitchel:${password}@blog.lmjgf.mongodb.net/${dbName}?retryWrites=true&w=majority`
+const mongoDBURI = `mongodb+srv://mitchel:${process.env.password}@blog.lmjgf.mongodb.net/${process.env.dbName}?retryWrites=true&w=majority`
 const cors = require('cors');
 
 require("dotenv").config()
